@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="Form_validation.css">
+</head>
+
+<body>
+    <h1>Form validation page</h1>
+        <form action="/formvalidation.php" name="myForm">
+            <div class="forminput" id="fName">
+                First Name: <input type="text" name="myFirstName" required>
+            </div>
+
+            <div class="forminput" id="mName">
+                Middle Name: <input type="text" name="myMiddleName">
+            </div>
+
+            <div class="forminput" id="lName">
+                Last Name: <input type="text" name="myLastName" required>
+            </div>
+
+            <div class="forminput" id="email">
+                Email: <input type="email" name="myEmail" required>
+            </div>
+
+            <div class="forminput" id="number">
+                Phone: <input type="number" name="myNum" required>
+            </div>
+
+            <div class="forminput" id="pass">
+                Password: <input type="password" name="myPass" required>
+            </div>
+
+            <div class="forminput" id="cpass">
+                Confirm Password: <input type="password" name="myCPass" required>
+            </div>
+            
+            <input id="submitbtn" type="submit" value="Submit">
+
+        </form>
+
+
+</body>
+
+</html>
