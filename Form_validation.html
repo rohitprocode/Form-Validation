@@ -12,32 +12,33 @@
 <body>
     <h1>Form validation page</h1>
         <form action="/formvalidation.php" name="myForm">
+            <p><span>*</span> is Mandatory</p> 
             <div class="forminput" id="fName">
-                First Name:<span class="mandatory_logo">*</span> <br><input type="text" name="myFirstName" required>
+                First Name<span class="mandatory_logo">*</span> <br><input type="text" name="myFirstName" required>
             </div>
 
             <div class="forminput" id="mName">
-                Middle Name:<span class="mandatory_logo">*</span> <br><input type="text" name="myMiddleName">
+                Middle Name<br><input type="text" name="myMiddleName">
             </div>
 
             <div class="forminput" id="lName">
-                Last Name:<span class="mandatory_logo">*</span> <br><input type="text" name="myLastName" required>
+                Last Name<span class="mandatory_logo">*</span> <br><input type="text" name="myLastName" required>
             </div>
 
             <div class="forminput" id="email">
-                Email:<span class="mandatory_logo">*</span> <br><input type="email" name="myEmail" required>
+                Email<span class="mandatory_logo">*</span> <br><input type="email" name="myEmail" required>
             </div>
 
             <div class="forminput" id="number">
-                Phone:<span class="mandatory_logo">*</span> <br><input type="number" name="myNum" required>
+                Phone<span class="mandatory_logo">*</span> <br><input type="number" name="myNum" required>
             </div>
 
             <div class="forminput" id="pass">
-                Password:<span class="mandatory_logo">*</span> <br><input type="password" name="myPass" required>
+                Password<span class="mandatory_logo">*</span> <br><input type="password" name="myPass" required>
             </div>
 
             <div class="forminput" id="cpass">
-                Confirm Password<span class="mandatory_logo">*</span>: <br><input type="password" name="myCPass" required>
+                Confirm Password<span class="mandatory_logo">*</span><br><input type="password" name="myCPass" required>
             </div>
             
             <input id="submitbtn" type="submit" value="Submit">
