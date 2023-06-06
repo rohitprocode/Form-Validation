@@ -15,6 +15,24 @@ form{
     align-items: center;
     border-top: 2px solid black;
 }
+form p{
+    position: absolute;
+    right:50vh;
+    top:10vh;
+}
+p{
+    width: 16vh;
+    height: 3vh;
+    background-color: black;
+    border-radius: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p span{
+    color: red;
+}
 .forminput{
     /* background-color: orange; */
     font-size: larger;
@@ -27,4 +45,8 @@ form{
     height: 4vh;
     padding: 1px;
     
+}
+
+.mandatory_logo{
+    color: red;
 }
