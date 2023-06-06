@@ -61,6 +61,7 @@ p span{
     height: 6vh;
     font-size: medium;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 #submitbtn:hover{
