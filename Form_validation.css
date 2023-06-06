@@ -46,9 +46,17 @@ p span{
     padding: 3px;
     padding-left: 6px;
     font-size: large;
+    border: 1.5px solid black;
+    border-radius: 5px;
     
 }
 
 .mandatory_logo{
     color: red;
+}
+
+#submitbtn{
+    width: 12vh;
+    height: 3vh;
+    font-size: medium;
 }
