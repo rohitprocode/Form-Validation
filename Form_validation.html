@@ -69,25 +69,26 @@
             let name = document.forms['myForm']["myFirstName"].value;
 
 
-            if(name.length<3){
-                setErrors('divfName',"Length of Name is too Short!");
+            if (name.length < 3) {
+                setErrors('divfName', "*Length of Name is too Short!");
                 onsubmit_condition = false;
             }
 
-            if(name.length>12){
-                setErrors('divfName',"Length of Name is too Long!");
+            if (name.length > 12) {
+                setErrors('divfName', "*Length of Name is too Long!");
                 onsubmit_condition = false;
             }
-
+            
             let middle_name = document.forms['myForm']['myMiddleName'].value;
 
-            if(middle_name!=String){
-                setErrors('divmName','Name can not be a Number');
+            if (typeof middle_name != String) {
+                setErrors('divmName', '*Name can not be a Number!');
                 onsubmit_condition = false;
             }
 
 
-                
+
+
             return onsubmit_condition;
         }
     </script>
