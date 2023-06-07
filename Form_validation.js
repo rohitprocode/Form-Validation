@@ -13,7 +13,6 @@ function validateForm() {
 
     //First Input
     let name = document.forms['myForm']["myFirstName"].value;
-
     if (name.length < 3) {
         setErrors('divfName', "*Length of Name is too Short!");
         onsubmit_condition = false;
@@ -31,7 +30,7 @@ function validateForm() {
 
     //Second Input
     let middle_name = document.forms['myForm']['myMiddleName'].value;
-    
+
     if ((middle_name.length > 0) && (middle_name.length < 3)) {
         setErrors('divmName', '*Length of middle name is too short!');
         onsubmit_condition = false;
@@ -46,6 +45,11 @@ function validateForm() {
         onsubmit_condition = false;
     }
 
+    let lastName = document.forms['myForm']['myLastName'].value;
+    
+    if(lastName.length < 3){
+        setErrors('divlaName','*Length of last name is too short!')
+    }
 
 
     return onsubmit_condition;
