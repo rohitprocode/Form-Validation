@@ -11,7 +11,7 @@ function validateForm() {
     //In the place of myFirstName you should write name of input in a form where you get input value
     let onsubmit_condition = true;
 
-    //First Input
+    // First Input
     let name = document.forms['myForm']["myFirstName"].value;
     if (name.length < 3) {
         setErrors('divfName', "*Length of Name is too Short!");
