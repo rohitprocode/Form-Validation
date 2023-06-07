@@ -64,5 +64,18 @@ function validateForm() {
     }
 
 
+    //Fourth Input
+    let email_Name = document.forms['myForm']['myEmail'].value;
+
+    if((email_Name.length > 0) && (email_Name.length < 11)){
+        setErrors('divemail','Length is too short');
+        onsubmit_condition = false;
+    }
+
+    if((email_Name.length > 35)){
+        setErrors('divemail','Length is too Long');
+        onsubmit_condition = false;
+    }
+
     return onsubmit_condition;
 }
