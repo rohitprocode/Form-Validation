@@ -55,6 +55,10 @@ p span{
     color: red;
 }
 
+.errorMsg{
+    color: red;
+}
+
 #submitbtn{
     margin-top: 2vh;
     width: 22vh;
