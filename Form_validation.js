@@ -67,15 +67,28 @@ function validateForm() {
     //Fourth Input
     let email_Name = document.forms['myForm']['myEmail'].value;
 
-    if((email_Name.length > 0) && (email_Name.length < 11)){
-        setErrors('divemail','Length is too short');
+    if(email_Name.length < 11){
+        setErrors('divemail','*Length is too short!');
         onsubmit_condition = false;
     }
 
     if((email_Name.length > 35)){
-        setErrors('divemail','Length is too Long');
+        setErrors('divemail','*Length is too Long!');
         onsubmit_condition = false;
     }
 
+    //Fifth Input
+    let phone_Number = document.forms['myForm']['myNum'].value;
+
+    if(phone_Number.length > 10){
+        setErrors('divnumber','*Number cannot be greater than 10 digits!');
+        onsubmit_condition = false;
+    }
+
+    if(phone_Number.length < 10){
+        setErrors('divnumber','*Number cannot be less than 10 digits!');
+        onsubmit_condition = false;
+    }
+    
     return onsubmit_condition;
 }
