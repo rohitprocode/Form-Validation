@@ -17,42 +17,43 @@
         <p><span>*</span>&nbsp;is Mandatory</p>
         <div class="forminput" id="divfName">
             <b>First Name</b><span class="mandatory_logo">*</span><br>
-            <input type="text" name="myFirstName" required><b><span class="errorMsg"></span></b>
+            <input type="text" name="myFirstName"><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divmName">
             <b>Middle Name</b><br>
-            <input type="text" name="myMiddleName" ><b><span class="errorMsg"></span></b>
+            <input type="text" name="myMiddleName"><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divlaName">
             <b>Last Name</b><span class="mandatory_logo">*</span> <br>
-            <input type="text" name="myLastName" required><b><span class="errorMsg"></span></b>
+            <input type="text" name="myLastName"><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divemail">
             <b>Email</b><span class="mandatory_logo">*</span> <br>
-            <input type="email" name="myEmail" required><b><span class="errorMsg"></span></b>
+            <input type="email" name="myEmail"><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divnumber">
-            <b>Phone</b><span class="mandatory_logo">*</span> <br>
-            <input type="text" name="myNum" required><b><span class="errorMsg"></span></b>
+            <b>Contact No</b><span class="mandatory_logo">*</span> <br>
+            <input type="text" id="country_code" value="(+91)" disabled>
+            <input type="number" name="myNum"><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divpass">
             <b>Password</b><span class="mandatory_logo">*</span> <br>
-            <input type="password" name="myPass" required ><b><span class="errorMsg"></span></b>
+            <input type="password" name="myPass"><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divcpass">
             <b>Confirm Password</b><span class="mandatory_logo">*</span><br>
-            <input type="password" name="myCPass" required ><b><span class="errorMsg"></span></b>
+            <input type="password" name="myCPass"><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="btns">
-        <input id="submitbtn" type="submit" value="Submit">
-    </div>
+            <input id="submitbtn" type="submit" value="Submit">
+        </div>
     </form>
 </body>
 <script src="Form_validation.js"></script>
