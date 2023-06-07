@@ -57,6 +57,10 @@ p span{
     color: red;
 }
 
+#country_code {
+    width: 45px;
+}
+
 .errorMsg{
     /* width: 52px; */
     /* background-color: greenyellow; */
@@ -84,3 +88,4 @@ p span{
     color: black;
     font-size:large;
 }
+
