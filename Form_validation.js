@@ -80,8 +80,17 @@ function validateForm() {
     //Fifth Input
     let phone_Number = document.forms['myForm']['myNum'].value;
 
-    if(phone_Number.length !== 15){
+    if(phone_Number.length !== 10){
         setErrors('divnumber','*Number must be 10 digits');
+        onsubmit_condition = false;
+    }
+
+
+    //Sixth Input
+    let passInput = document.forms['myForm']['myPass'].value;
+
+    if(passInput.length < 8){
+        setErrors('divpass','Password should be atleast eight characters long');
         onsubmit_condition = false;
     }
     
