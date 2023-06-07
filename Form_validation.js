@@ -31,10 +31,7 @@ function validateForm() {
 
     //Second Input
     let middle_name = document.forms['myForm']['myMiddleName'].value;
-    // console.log(middle_name.length);
-    // if(middle_name.length==0){
-    //     onsubmit_condition=false;
-    // }
+    
     if ((middle_name.length > 0) && (middle_name.length < 3)) {
         setErrors('divmName', '*Length of middle name is too short!');
         onsubmit_condition = false;
