@@ -80,13 +80,8 @@ function validateForm() {
     //Fifth Input
     let phone_Number = document.forms['myForm']['myNum'].value;
 
-    if(phone_Number.length > 10){
-        setErrors('divnumber','*Number cannot be greater than 10 digits!');
-        onsubmit_condition = false;
-    }
-
-    if(phone_Number.length < 10){
-        setErrors('divnumber','*Number cannot be less than 10 digits!');
+    if(phone_Number.length !== 15){
+        setErrors('divnumber','*Number must be 10 digits');
         onsubmit_condition = false;
     }
     
