@@ -45,10 +45,22 @@ function validateForm() {
         onsubmit_condition = false;
     }
 
+    //Third Input
     let lastName = document.forms['myForm']['myLastName'].value;
     
     if(lastName.length < 3){
         setErrors('divlaName','*Length of last name is too short!');
+        onsubmit_condition = false;
+    }
+
+    if(lastName.lastName > 12){
+        setErrors('divlaName','*Length of last name is too long!');
+        onsubmit_condition = false;
+    }
+
+    if(Number(lastName)){
+        setErrors('divlaName','*Name cannot be Number!');
+        onsubmit_condition = false;
     }
 
 
