@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    /* box-sizing: border-box; */
 }
 h1{
     text-align: center;
@@ -12,7 +13,7 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     border-top: 2px solid black;
 }
 form p{
@@ -37,6 +38,7 @@ p span{
     /* background-color: orange; */
     font-size: larger;
     margin: 10px;
+    width:50em;
     
 }
 
@@ -56,11 +58,19 @@ p span{
 }
 
 .errorMsg{
+    /* width: 52px; */
+    /* background-color: greenyellow; */
     color: red;
+    margin-left: 5px;
 }
 
+.btns{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #submitbtn{
-    margin-top: 2vh;
     width: 22vh;
     height: 6vh;
     font-size: medium;
