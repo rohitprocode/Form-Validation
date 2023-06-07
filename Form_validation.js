@@ -48,7 +48,7 @@ function validateForm() {
     let lastName = document.forms['myForm']['myLastName'].value;
     
     if(lastName.length < 3){
-        setErrors('divlaName','*Length of last name is too short!')
+        setErrors('divlaName','*Length of last name is too short!');
     }
 
 
