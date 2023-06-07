@@ -69,17 +69,18 @@ p span{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2vh;
 }
 #submitbtn{
     width: 22vh;
     height: 6vh;
     font-size: medium;
-    border-radius: 3px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 #submitbtn:hover{
-    background-color: black;
-    color: white;
+    background-color: lightgreen;
+    color: black;
     font-size:large;
 }
