@@ -66,9 +66,10 @@
             // In the place of myForm you should write name of form in a document
             //In the place of myFirstName you should write name of input in a form where you get input value
             let onsubmit_condition = true;
+
+
             let name = document.forms['myForm']["myFirstName"].value;
-
-
+            
             if (name.length < 3) {
                 setErrors('divfName', "*Length of Name is too Short!");
                 onsubmit_condition = false;
@@ -78,15 +79,17 @@
                 setErrors('divfName', "*Length of Name is too Long!");
                 onsubmit_condition = false;
             }
-            
-            let middle_name = document.forms['myForm']['myMiddleName'].value;
 
-            if (typeof middle_name != String) {
+
+            let middle_name = document.forms['myForm']['myMiddleName'].value;
+            console.log(typeof(middle_name));
+            debugger
+
+            if (Number(middle_name)) {
                 setErrors('divmName', '*Name can not be a Number!');
                 onsubmit_condition = false;
+
             }
-
-
 
 
             return onsubmit_condition;
