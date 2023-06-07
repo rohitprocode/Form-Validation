@@ -59,6 +59,22 @@ p span{
 
 #country_code {
     width: 45px;
+    border-right: 0px;
+    background-color: white;
+    margin-right: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: black;
+}
+#numberInput{
+    border-left: 0px;
+    margin-left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    width: 43vh;
+}
+#numberInput:focus{
+    outline: none;
 }
 
 .errorMsg{
