@@ -24,11 +24,12 @@ function validateForm() {
    
     // First Input
     let name = document.forms['myForm']["myFirstName"].value;
+    debugger
     if (name.length < 3) {
         setErrors('divfName', "*Length of Name is too Short!");
         document.getElementById('fnameInpu').style.border = "2px solid red";
         // if (onsubmit_condition == false) {
-        //     document.getElementById('fnameInput').style.borderColor = "red";
+        //     document.getElementsByTagName('fnameInput').style.borderColor = "red";
         // }
         onsubmit_condition = false;
 
@@ -43,6 +44,12 @@ function validateForm() {
     if (Number(name)) {
         setErrors('divfName', '*Name cannot be a Number');
         document.getElementById('fnameInpu').style.border = "2px solid red";
+        onsubmit_condition = false;
+    }
+
+    else{
+        setErrors('divfName', 'Everything is ok');
+        document.getElementById('fnameInpu').style.border = "2px solid lightgreen";
         onsubmit_condition = false;
     }
 
