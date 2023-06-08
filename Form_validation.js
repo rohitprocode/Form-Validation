@@ -6,22 +6,31 @@ function setErrors(id, error) {
     element.getElementsByClassName('errorMsg')[0].innerHTML = error;
 }
 
-function showerr(){
-let obj1 = document.getElementById('country_code');
-obj1 = obj1.setAttribute("style","border-left: 2px solid red; border-top: 2px solid red; border-bottom: 2px solid red;");
+function showerr() {
+    let obj1 = document.getElementById('country_code');
+    obj1 = obj1.setAttribute("style", "border-left: 2px solid red; border-top: 2px solid red; border-bottom: 2px solid red;");
 }
 
-function showerr2(){
+function showerr2() {
     let obj2 = document.getElementById('numberInput');
-    obj2 = obj2.setAttribute("style","border-right: 2px solid red; border-top: 2px solid red; border-bottom: 2px solid red;");
-    }
+    obj2 = obj2.setAttribute("style", "border-right: 2px solid red; border-top: 2px solid red; border-bottom: 2px solid red;");
+}
 
+function showerr3(){
+    let obj3 = document.getElementById('country_code');
+    obj3 = obj3.setAttribute("style","border-left: 2px solid lightgreen; border-top: 2px solid lightgreen; border-bottom: 2px solid lightgreen");
+}
+
+function showerr4(){
+    let obj4 = document.getElementById('numberInput');
+    obj4 = obj4.setAttribute("style","border-right : 2px solid lightgreen; border-top : 2px solid light green; border-bottom : 2px solid lightgreen");
+}
 
 function validateForm() {
     // In the place of myForm you should write name of form in a document
     //In the place of myFirstName you should write name of input in a form where you get input value
     let onsubmit_condition = true;
-   
+
     // First Input
     let name = document.forms['myForm']["myFirstName"].value;
     debugger
@@ -47,7 +56,7 @@ function validateForm() {
         onsubmit_condition = false;
     }
 
-    else{
+    else {
         setErrors('divfName', 'Everything is ok');
         document.getElementById('fnameInpu').style.border = "2px solid lightgreen";
         onsubmit_condition = false;
@@ -76,6 +85,12 @@ function validateForm() {
         onsubmit_condition = false;
     }
 
+    else {
+        setErrors('divmName', 'Everything is ok');
+        document.getElementById('mnameInpu').style.border = "2px solid lightgreen";
+        onsubmit_condition = false;
+    }
+
     //Third Input
     let lastName = document.forms['myForm']['myLastName'].value;
 
@@ -97,6 +112,11 @@ function validateForm() {
         onsubmit_condition = false;
     }
 
+    else {
+        setErrors('divlaName', 'Everything is ok');
+        document.getElementById('lnameInpu').style.border = "2px solid lightgreen";
+        onsubmit_condition = false;
+    }
 
     //Fourth Input
     let email_Name = document.forms['myForm']['myEmail'].value;
@@ -113,6 +133,12 @@ function validateForm() {
         onsubmit_condition = false;
     }
 
+    else {
+        setErrors('divemail', 'Everything is ok');
+        document.getElementById('emailnameInpu').style.border = "2px solid lightgreen";
+        onsubmit_condition = false;
+    }
+
     //Fifth Input
     let phone_Number = document.forms['myForm']['myNum'].value;
 
@@ -123,6 +149,12 @@ function validateForm() {
         onsubmit_condition = false;
     }
 
+    else {
+        setErrors('divnumber', 'Everything is ok');
+        document.getElementById('country_code').innerHTML = showerr3();
+        document.getElementById('numberInput').innerHTML = showerr4();
+        onsubmit_condition = false;
+    }
 
     //Sixth Input
     let passInput = document.forms['myForm']['myPass'].value;
@@ -133,6 +165,11 @@ function validateForm() {
         onsubmit_condition = false;
     }
 
+    else {
+        setErrors('divpass', 'Everything is ok');
+        document.getElementById('pInpu').style.border = "2px solid lightgreen";
+        onsubmit_condition = false;
+    }
 
     return onsubmit_condition;
 
