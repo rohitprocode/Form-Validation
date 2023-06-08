@@ -11,6 +11,10 @@ let obj1 = document.getElementById('country_code');
 obj1 = obj1.setAttribute("style","border-left: 2px solid red; border-top: 2px solid red; border-bottom: 2px solid red;");
 }
 
+function showerr2(){
+    let obj2 = document.getElementById('numberInput');
+    obj2 = obj2.setAttribute("style","border-right: 2px solid red; border-top: 2px solid red; border-bottom: 2px solid red;");
+    }
 
 
 function validateForm() {
@@ -108,7 +112,7 @@ function validateForm() {
     if (phone_Number.length !== 10) {
         setErrors('divnumber', '*Number must be 10 digits');
         document.getElementById('country_code').innerHTML = showerr();
-        document.getElementById('numberInput').style.border = "2px solid red";
+        document.getElementById('numberInput').innerHTML = showerr2();
         onsubmit_condition = false;
     }
 
