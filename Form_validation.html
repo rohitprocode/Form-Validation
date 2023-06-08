@@ -11,13 +11,13 @@
 
 <body>
     <h1>Form validation page</h1>
-    <form action="/formvalidation.php" name="myForm" onsubmit="return validateForm()" method="post">
+    <form action="/formvalidation.php" name="myForm" autocomplete="on"  onsubmit="return validateForm()" method="post">
         <!-- action is used in form for locate path after submit details. -->
 
         <p><span>*</span>&nbsp;is Mandatory</p>
         <div class="forminput" id="divfName">
             <b>First Name</b><span class="mandatory_logo">*</span><br>
-            <input type="text" name="myFirstName"><b><span class="errorMsg"></span></b>
+            <input type="text" name="myFirstName" ><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divmName">
@@ -32,12 +32,12 @@
 
         <div class="forminput" id="divemail">
             <b>Email</b><span class="mandatory_logo">*</span> <br>
-            <input type="email" name="myEmail"><b><span class="errorMsg"></span></b>
+            <input type="email" name="myEmail" autocomplete="off"><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divnumber">
             <b>Contact No</b><span class="mandatory_logo">*</span> <br>
-            <input type="text" id="country_code" value="(+91)" disabled><input type="number" name="myNum" id="numberInput"><b><span class="errorMsg"></span></b>
+            <input type="text" id="country_code" value="(+91)" disabled><input type="number" name="myNum" id="numberInput"  autocomplete="off"><b><span class="errorMsg" ></span></b>
         </div>
 
         <div class="forminput" id="divpass">
