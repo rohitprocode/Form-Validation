@@ -72,10 +72,23 @@ p span{
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     width: 43vh;
+   
 }
 #numberInput:focus{
     outline: none;
 }
+/* 
+#num_area #country_code{
+    border-left: 2px solid red;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+}
+
+#num_area #numberInput{
+    border-right: 2px solid red;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+} */
 
 .errorMsg{
     /* width: 52px; */
