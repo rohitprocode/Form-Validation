@@ -17,32 +17,32 @@
         <p><span>*</span>&nbsp;is Mandatory</p>
         <div class="forminput" id="divfName">
             <b>First Name</b><span class="mandatory_logo">*</span><br>
-            <input type="text" name="myFirstName" ><b><span class="errorMsg"></span></b>
+            <input type="text" name="myFirstName" id="fnameInpu" ><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divmName">
             <b>Middle Name</b><br>
-            <input type="text" name="myMiddleName"><b><span class="errorMsg"></span></b>
+            <input type="text" name="myMiddleName" id="mnameInpu" ><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divlaName">
             <b>Last Name</b><span class="mandatory_logo">*</span> <br>
-            <input type="text" name="myLastName"><b><span class="errorMsg"></span></b>
+            <input type="text" name="myLastName" id="lnameInpu"><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divemail">
             <b>Email</b><span class="mandatory_logo">*</span> <br>
-            <input type="email" name="myEmail" autocomplete="off"><b><span class="errorMsg"></span></b>
+            <input type="email" name="myEmail" autocomplete="off" id="emailnameInpu" ><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divnumber">
             <b>Contact No</b><span class="mandatory_logo">*</span> <br>
-            <input type="text" id="country_code" value="(+91)" disabled><input type="number" name="myNum" id="numberInput"  autocomplete="off"><b><span class="errorMsg" ></span></b>
+            <span id="num_area"> <input type="text" id="country_code" value="(+91)" disabled><input type="number" name="myNum" id="numberInput"  autocomplete="off"></span><b><span class="errorMsg" ></span></b>
         </div>
 
         <div class="forminput" id="divpass">
             <b>Password</b><span class="mandatory_logo">*</span> <br>
-            <input type="password" name="myPass"><b><span class="errorMsg"></span></b>
+            <input type="password" name="myPass" id="pInpu" ><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divcpass">
@@ -51,7 +51,7 @@
         </div>
 
         <div class="btns">
-            <input id="submitbtn" type="submit" value="Submit">
+            <input id="submitbtn" type="submit" value="Submit" >
         </div>
     </form>
 </body>
