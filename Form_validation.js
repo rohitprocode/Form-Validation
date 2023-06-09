@@ -5,8 +5,8 @@ function getcolor(id,msg){
 }
 function rgbalert(){
     let fname = document.forms['myForm']['myFirstName'].value;
-    if ((fname.length > 0) && (fname.length < 3)){
-        getcolor('divfName','*Length of Name is too Short!')
+    if ((fname.length >= 0) && (fname.length < 3)){
+        getcolor('divfName','*Length of Name is too Short!123')
         document.getElementById('fnameInpu').style.border = "2px solid red";
     }
     if (fname.length > 12) {
