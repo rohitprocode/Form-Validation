@@ -1,3 +1,37 @@
+
+function getcolor(id,msg){
+    element1 = document.getElementById(id);
+    element1.getElementsByClassName('errorMsg')[0].innerHTML = msg;
+}
+function rgbalert(){
+    let fname = document.forms['myForm']['myFirstName'].value;
+    if ((fname.length > 0) && (fname.length < 3)){
+        getcolor('divfName','*Length of Name is too Short!')
+        document.getElementById('fnameInpu').style.border = "2px solid red";
+    }
+    if (fname.length > 12) {
+        setErrors('divfName', "*Length of Name is too Long!");
+        document.getElementById('fnameInpu').style.border = "2px solid red";
+    }
+
+    if (Number(fname)) {
+        setErrors('divfName', '*Name cannot be a Number');
+        document.getElementById('fnameInpu').style.border = "2px solid red";
+    }
+    else{
+        getcolor('divfName','Looks Good')
+        document.getElementById('fnameInpu').style.border = "2px solid lightgreen";
+    }
+}
+
+
+
+
+
+
+
+
+
 //Create Function for take id and pass error in a particular place of error(span tag)/
 function setErrors(id, error) {
     //Sets error inside tag of id
@@ -33,7 +67,6 @@ function validateForm() {
 
     // First Input
     let name = document.forms['myForm']["myFirstName"].value;
-    debugger
     if (name.length < 3) {
         setErrors('divfName', "*Length of Name is too Short!");
         document.getElementById('fnameInpu').style.border = "2px solid red";
