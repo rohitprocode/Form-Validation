@@ -4,6 +4,7 @@ function getcolor(id,msg){
     element1.getElementsByClassName('errorMsg')[0].innerHTML = msg;
 }
 function rgbalert(){
+    debugger
     let fname = document.forms['myForm']['myFirstName'].value;
     if ((fname.length >= 0) && (fname.length < 3)){
         getcolor('divfName','*Length of Name is too Short!123')
