@@ -1,34 +1,24 @@
 
-function getcolor(id,msg){
-    element1 = document.getElementById(id);
-    element1.getElementsByClassName('errorMsg')[0].innerHTML = msg;
-}
-function rgbalert(){
-    debugger
-    let fname = document.forms['myForm']['myFirstName'].value;
-    if ((fname.length >= 0) && (fname.length < 3)){
-        getcolor('divfName','*Length of Name is too Short!123')
-        document.getElementById('fnameInpu').style.border = "2px solid red";
-    }
-    if (fname.length > 12) {
-        setErrors('divfName', "*Length of Name is too Long!");
-        document.getElementById('fnameInpu').style.border = "2px solid red";
-    }
 
-    if (Number(fname)) {
-        setErrors('divfName', '*Name cannot be a Number');
-        document.getElementById('fnameInpu').style.border = "2px solid red";
-    }
-    else{
-        getcolor('divfName','Looks Good')
-        document.getElementById('fnameInpu').style.border = "2px solid lightgreen";
-    }
+function showerr() {
+    let obj1 = document.getElementById('country_code');
+    obj1 = obj1.setAttribute("style", "border-left: 2px solid red; border-top: 2px solid red; border-bottom: 2px solid red;");
 }
 
+function showerr2() {
+    let obj2 = document.getElementById('numberInput');
+    obj2 = obj2.setAttribute("style", "border-right: 2px solid red; border-top: 2px solid red; border-bottom: 2px solid red;");
+}
 
+function showerr3() {
+    let obj3 = document.getElementById('country_code');
+    obj3 = obj3.setAttribute("style", "border-left: 2px solid lightgreen; border-top: 2px solid lightgreen; border-bottom: 2px solid lightgreen");
+}
 
-
-
+function showerr4() {
+    let obj4 = document.getElementById('numberInput');
+    obj4 = obj4.setAttribute("style", "border-right : 2px solid lightgreen; border-top : 2px solid lightgreen; border-bottom : 2px solid lightgreen");
+}
 
 
 
@@ -41,27 +31,9 @@ function setErrors(id, error) {
     element.getElementsByClassName('errorMsg')[0].innerHTML = error;
 }
 
-function showerr() {
-    let obj1 = document.getElementById('country_code');
-    obj1 = obj1.setAttribute("style", "border-left: 2px solid red; border-top: 2px solid red; border-bottom: 2px solid red;");
-}
-
-function showerr2() {
-    let obj2 = document.getElementById('numberInput');
-    obj2 = obj2.setAttribute("style", "border-right: 2px solid red; border-top: 2px solid red; border-bottom: 2px solid red;");
-}
-
-function showerr3(){
-    let obj3 = document.getElementById('country_code');
-    obj3 = obj3.setAttribute("style","border-left: 2px solid lightgreen; border-top: 2px solid lightgreen; border-bottom: 2px solid lightgreen");
-}
-
-function showerr4(){
-    let obj4 = document.getElementById('numberInput');
-    obj4 = obj4.setAttribute("style","border-right : 2px solid lightgreen; border-top : 2px solid light green; border-bottom : 2px solid lightgreen");
-}
 
 function validateForm() {
+    
     // In the place of myForm you should write name of form in a document
     //In the place of myFirstName you should write name of input in a form where you get input value
     let onsubmit_condition = true;
@@ -75,7 +47,6 @@ function validateForm() {
         //     document.getElementsByTagName('fnameInput').style.borderColor = "red";
         // }
         onsubmit_condition = false;
-
     }
 
     if (name.length > 12) {
@@ -90,11 +61,11 @@ function validateForm() {
         onsubmit_condition = false;
     }
 
-    else {
-        setErrors('divfName', 'Everything is ok');
-        document.getElementById('fnameInpu').style.border = "2px solid lightgreen";
-        onsubmit_condition = false;
-    }
+    // else {
+    //     setErrors('divfName', 'Everything is ok');
+    //     document.getElementById('fnameInpu').style.border = "2px solid lightgreen";
+    //     onsubmit_condition = false;
+    // }
 
 
     //Second Input
@@ -122,7 +93,7 @@ function validateForm() {
     else {
         setErrors('divmName', 'Everything is ok');
         document.getElementById('mnameInpu').style.border = "2px solid lightgreen";
-        onsubmit_condition = false;
+        // onsubmit_condition = false;
     }
 
     //Third Input
@@ -149,7 +120,7 @@ function validateForm() {
     else {
         setErrors('divlaName', 'Everything is ok');
         document.getElementById('lnameInpu').style.border = "2px solid lightgreen";
-        onsubmit_condition = false;
+        // onsubmit_condition = false;
     }
 
     //Fourth Input
@@ -170,7 +141,7 @@ function validateForm() {
     else {
         setErrors('divemail', 'Everything is ok');
         document.getElementById('emailnameInpu').style.border = "2px solid lightgreen";
-        onsubmit_condition = false;
+        // onsubmit_condition = false;
     }
 
     //Fifth Input
@@ -180,14 +151,14 @@ function validateForm() {
         setErrors('divnumber', '*Number must be 10 digits');
         document.getElementById('country_code').innerHTML = showerr();
         document.getElementById('numberInput').innerHTML = showerr2();
-        onsubmit_condition = false;
+        // onsubmit_condition = false;
     }
 
     else {
         setErrors('divnumber', 'Everything is ok');
         document.getElementById('country_code').innerHTML = showerr3();
         document.getElementById('numberInput').innerHTML = showerr4();
-        onsubmit_condition = false;
+        // onsubmit_condition = false;
     }
 
     //Sixth Input
@@ -202,9 +173,35 @@ function validateForm() {
     else {
         setErrors('divpass', 'Everything is ok');
         document.getElementById('pInpu').style.border = "2px solid lightgreen";
-        onsubmit_condition = false;
+        // onsubmit_condition = false;
     }
 
     return onsubmit_condition;
 
 }
+
+
+// function getcolor(id, msg) {
+//     element1 = document.getElementById(id);
+//     element1.getElementsByClassName('errorMsg')[0].innerHTML = msg;
+// }
+    // function rgbalert() {
+    //     let fname = document.forms['myForm']['myFirstName'].value;
+    //     if (fname.length < 3) {
+    //         setErrors('divfName', '*Length of Name is too Short!123')
+    //         document.getElementById('fnameInpu').style.border = "2px solid red";
+    //     }
+    //     if (fname.length > 12) {
+    //         setErrors('divfName', "*Length of Name is too Long!");
+    //         document.getElementById('fnameInpu').style.border = "2px solid red";
+    //     }
+
+    //     if (Number(fname)) {
+    //         setErrors('divfName', '*Name cannot be a Number');
+    //         document.getElementById('fnameInpu').style.border = "2px solid red";
+    //     }
+    //     else {
+    //         getcolor('divfName', 'Looks Good')
+    //         document.getElementById('fnameInpu').style.border = "2px solid lightgreen";
+    //     }
+    // }
