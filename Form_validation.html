@@ -10,13 +10,13 @@
 
 <body>
     <h1>Form validation page</h1>
-    <form action="/formvalidation.php" name="myForm" onsubmit="return validateForm()" method="post">
+    <form action="/formvalidation.php" name="myForm" onsubmit="return validateForm()" method="post" >
         <!-- action is used in form for locate path after submit details. -->
 
         <p><span>*</span>&nbsp;is Mandatory</p>
         <div class="forminput" id="divfName">
             <b>First Name</b><span class="mandatory_logo">*</span><br>
-            <input type="text" name="myFirstName" id="fnameInpu" required><b><span class="errorMsg"></span></b>
+            <input type="text" name="myFirstName" id="fnameInpu" required oninput="greenAlert()" ><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divmName">
