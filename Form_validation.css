@@ -89,6 +89,10 @@ p span{
     border-bottom: 2px solid red;
 } */
 
+input:focus{
+    outline: none;
+}
+
 .errorMsg{
     /* width: 52px; */
     /* background-color: greenyellow; */
