@@ -32,6 +32,14 @@ function setErrors(id, error) {
 }
 
 
+function greenAlert(){
+    // let inpu1 = document.forms['myForm']['"myFirstName"'].value;
+    setErrors('divfName','Looks Good');
+    document.getElementById('fnameInpu').style.border = '2px solid lightgreen';
+    validateForm(); 
+}
+
+
 function validateForm() {
     
     // In the place of myForm you should write name of form in a document
