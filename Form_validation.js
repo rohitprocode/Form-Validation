@@ -21,8 +21,6 @@ function showerr4() {
 }
 
 
-
-
 //Create Function for take id and pass error in a particular place of error(span tag)/
 function setErrors(id, error) {
     //Sets error inside tag of id
