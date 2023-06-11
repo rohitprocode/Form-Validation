@@ -40,16 +40,6 @@ function greenAlert(){
     // validateForm(); 
 }
 
-function password_validation(){
-    let pass = document.getElementById('pInpu').value;
-    let password_restrict = /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}/;
-    let passCheck = password_restrict.test(pass);
-    if(passCheck == true){
-        setErrors('divpass','Looks Good');
-    }else{
-        setErrors('divpass','Follow Password Condtions');
-    }
-}
 
 
 function validateForm() {
@@ -156,7 +146,6 @@ function validateForm() {
 
     //Sixth Input
     let passInput = document.forms['myForm']['myPass'].value;
-    console.log(passInput);
     if (passInput.length < 8) {
         setErrors('divpass', 'Password should be atleast eight characters long');
         document.getElementById('pInpu').style.border = "2px solid red";
@@ -172,8 +161,7 @@ function validateForm() {
     //Sixth Input
 
     let confirmpassInput = document.forms['myForm']['myCPass'].value;
-    console.log(confirmpassInput);
-    if(passInput == confirmpassInput){
+    if(passInput !== confirmpassInput){
         setErrors("divcpass","Password doesn't Match");
         document.getElementById('cpInpu').style.border = "2px solid red";
         onsubmit_condition = false;
@@ -183,6 +171,27 @@ function validateForm() {
 
 }
 
+
+function password_validation(){
+    let pass = document.getElementById('pInpu').value;
+    let password_restrict = /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}/;
+    let passCheck = password_restrict.test(pass);
+    if(passCheck == true){
+        setErrors('divpass','Looks Good');
+    }else{
+        setErrors('divpass','Follow Password Condtions');
+        onsubmit_condition = false;
+    }
+}
+
+function pass_show(){
+    let pshow = document.getElementById('pInpu');
+    if(pshow.type === 'password'){
+        pshow.type = 'text';
+    }else{
+        pshow.type ='password';
+    }
+}
 
 // function getcolor(id, msg) {
 //     element1 = document.getElementById(id);
