@@ -67,12 +67,6 @@ function validateForm() {
         onsubmit_condition = false;
     }
 
-    // else {
-    //     setErrors('divfName', 'Everything is ok');
-    //     document.getElementById('fnameInpu').style.border = "2px solid lightgreen";
-    //     onsubmit_condition = false;
-    // }
-
 
     //Second Input
     let middle_name = document.forms['myForm']['myMiddleName'].value;
@@ -96,12 +90,6 @@ function validateForm() {
         onsubmit_condition = false;
     }
 
-    else {
-        setErrors('divmName', 'Everything is ok');
-        document.getElementById('mnameInpu').style.border = "2px solid lightgreen";
-        // onsubmit_condition = false;
-    }
-
     //Third Input
     let lastName = document.forms['myForm']['myLastName'].value;
 
@@ -123,11 +111,6 @@ function validateForm() {
         onsubmit_condition = false;
     }
 
-    else {
-        setErrors('divlaName', 'Everything is ok');
-        document.getElementById('lnameInpu').style.border = "2px solid lightgreen";
-        // onsubmit_condition = false;
-    }
 
     //Fourth Input
     let email_Name = document.forms['myForm']['myEmail'].value;
@@ -144,11 +127,7 @@ function validateForm() {
         onsubmit_condition = false;
     }
 
-    else {
-        setErrors('divemail', 'Everything is ok');
-        document.getElementById('emailnameInpu').style.border = "2px solid lightgreen";
-        // onsubmit_condition = false;
-    }
+    
 
     //Fifth Input
     let phone_Number = document.forms['myForm']['myNum'].value;
@@ -160,12 +139,6 @@ function validateForm() {
         // onsubmit_condition = false;
     }
 
-    else {
-        setErrors('divnumber', 'Everything is ok');
-        document.getElementById('country_code').innerHTML = showerr3();
-        document.getElementById('numberInput').innerHTML = showerr4();
-        // onsubmit_condition = false;
-    }
 
     //Sixth Input
     let passInput = document.forms['myForm']['myPass'].value;
