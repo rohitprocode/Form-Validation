@@ -1,20 +1,23 @@
 
-
+//Function for Phone_Number input
 function showerr() {
     let obj1 = document.getElementById('country_code');
     obj1 = obj1.setAttribute("style", "border-left: 2px solid red; border-top: 2px solid red; border-bottom: 2px solid red;");
 }
 
+//Function for Phone_Number input
 function showerr2() {
     let obj2 = document.getElementById('numberInput');
     obj2 = obj2.setAttribute("style", "border-right: 2px solid red; border-top: 2px solid red; border-bottom: 2px solid red;");
 }
 
+//Function for Phone_Number input
 function showerr3() {
     let obj3 = document.getElementById('country_code');
     obj3 = obj3.setAttribute("style", "border-left: 2px solid lightgreen; border-top: 2px solid lightgreen; border-bottom: 2px solid lightgreen");
 }
 
+//Function for Phone_Number input
 function showerr4() {
     let obj4 = document.getElementById('numberInput');
     obj4 = obj4.setAttribute("style", "border-right : 2px solid lightgreen; border-top : 2px solid lightgreen; border-bottom : 2px solid lightgreen");
@@ -29,12 +32,12 @@ function setErrors(id, error) {
     element.getElementsByClassName('errorMsg')[0].innerHTML = error;
 }
 
-
+//Function for Phone_Number input
 function greenAlert(){
     // let inpu1 = document.forms['myForm']['"myFirstName"'].value;
     setErrors('divfName','Looks Good');
     document.getElementById('fnameInpu').style.border = '2px solid lightgreen';
-    validateForm(); 
+    // validateForm(); 
 }
 
 
@@ -72,7 +75,7 @@ function validateForm() {
     let middle_name = document.forms['myForm']['myMiddleName'].value;
 
 
-    if ((middle_name.length > 0) && (middle_name.length < 3)) {
+    if ((middle_name.length >= 1) && (middle_name.length < 3)) {
         setErrors('divmName', '*Length of middle name is too short!');
         document.getElementById('mnameInpu').style.border = "2px solid red";
         onsubmit_condition = false;
@@ -136,23 +139,33 @@ function validateForm() {
         setErrors('divnumber', '*Number must be 10 digits');
         document.getElementById('country_code').innerHTML = showerr();
         document.getElementById('numberInput').innerHTML = showerr2();
-        // onsubmit_condition = false;
+        onsubmit_condition = false;
     }
 
 
     //Sixth Input
     let passInput = document.forms['myForm']['myPass'].value;
-
+    console.log(passInput);
     if (passInput.length < 8) {
         setErrors('divpass', 'Password should be atleast eight characters long');
         document.getElementById('pInpu').style.border = "2px solid red";
         onsubmit_condition = false;
     }
 
-    else {
-        setErrors('divpass', 'Everything is ok');
-        document.getElementById('pInpu').style.border = "2px solid lightgreen";
-        // onsubmit_condition = false;
+    // else {
+    //     setErrors('divpass', 'Everything is ok');
+    //     document.getElementById('pInpu').style.border = "2px solid lightgreen";
+    //     onsubmit_condition = false;
+    // }
+
+    //Sixth Input
+
+    let confirmpassInput = document.forms['myForm']['myCPass'].value;
+    console.log(confirmpassInput);
+    if(passInput == confirmpassInput){
+        setErrors("divcpass","Password doesn't Match");
+        document.getElementById('cpInpu').style.border = "2px solid red";
+        onsubmit_condition = false;
     }
 
     return onsubmit_condition;
