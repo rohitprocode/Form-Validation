@@ -40,6 +40,17 @@ function greenAlert(){
     // validateForm(); 
 }
 
+function password_validation(){
+    let pass = document.getElementById('pInpu').value;
+    let password_restrict = /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}/;
+    let passCheck = password_restrict.test(pass);
+    if(passCheck == true){
+        setErrors('divpass','Looks Good');
+    }else{
+        setErrors('divpass','Follow Password Condtions');
+    }
+}
+
 
 function validateForm() {
     
