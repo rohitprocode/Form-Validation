@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +16,7 @@
         <p><span>*</span>&nbsp;is Mandatory</p>
         <div class="forminput" id="divfName">
             <b>First Name</b><span class="mandatory_logo">*</span><br>
-            <input type="text" name="myFirstName" id="fnameInpu" required oninput="greenAlert()"><b><span
+            <input type="text" name="myFirstName" id="fnameInpu" required ><b><span
                     class="errorMsg"></span></b>
         </div>
 
@@ -49,11 +48,11 @@
 
         <div class="forminput" id="divcpass">
             <b>Confirm Password</b><span class="mandatory_logo">*</span><br>
-            <input type="password" name="myCPass"><b><span class="errorMsg"></span></b>
+            <input type="password" name="myCPass" id="cpInpu" required><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="btns">
-            <input id="submitbtn" type="submit" value="Submit">
+            <input id="submitbtn" type="submit" value="Submit" >
         </div>
     </form>
 </body>
