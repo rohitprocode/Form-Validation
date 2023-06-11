@@ -73,9 +73,7 @@ p span{
     width: 43vh;
    
 }
-#numberInput:focus{
-    outline: none;
-}
+
 /* 
 #num_area #country_code{
     border-left: 2px solid red;
