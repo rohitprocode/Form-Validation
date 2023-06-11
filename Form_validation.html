@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,44 +11,45 @@
 
 <body>
     <h1>Form validation page</h1>
-    <form action="/formvalidation.php" name="myForm" onsubmit="return validateForm()" method="post" >
+    <form action="/formvalidation.php" name="myForm" onsubmit="return validateForm()" method="post">
         <!-- action is used in form for locate path after submit details. -->
 
         <p><span>*</span>&nbsp;is Mandatory</p>
         <div class="forminput" id="divfName">
             <b>First Name</b><span class="mandatory_logo">*</span><br>
-            <input type="text" name="myFirstName" id="fnameInpu" required oninput="greenAlert()" ><b><span class="errorMsg"></span></b>
+            <input type="text" name="myFirstName" id="fnameInpu" required oninput="greenAlert()"><b><span
+                    class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divmName">
             <b>Middle Name</b><br>
-            <input type="text" name="myMiddleName" id="mnameInpu" ><b><span class="errorMsg"></span></b>
+            <input type="text" name="myMiddleName" id="mnameInpu"><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divlaName">
             <b>Last Name</b><span class="mandatory_logo">*</span> <br>
-            <input type="text" name="myLastName" id="lnameInpu" ><b><span class="errorMsg"></span></b>
+            <input type="text" name="myLastName" id="lnameInpu"><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divemail">
             <b>Email</b><span class="mandatory_logo">*</span> <br>
-            <input type="email" name="myEmail" id="emailnameInpu" ><b><span class="errorMsg"></span></b>
+            <input type="email" name="myEmail" id="emailnameInpu"><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divnumber">
             <b>Contact No</b><span class="mandatory_logo">*</span> <br>
             <input type="text" id="country_code" value="(+91)" disabled><input type="number" name="myNum"
-                id="numberInput" ></span><b><span class="errorMsg"></b>
+                id="numberInput"></span><b><span class="errorMsg"></b>
         </div>
 
         <div class="forminput" id="divpass">
             <b>Password</b><span class="mandatory_logo">*</span> <br>
-            <input type="password" name="myPass" id="pInpu" ><b><span class="errorMsg"></span></b>
+            <input type="password" name="myPass" id="pInpu"><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="forminput" id="divcpass">
             <b>Confirm Password</b><span class="mandatory_logo">*</span><br>
-            <input type="password" name="myCPass" ><b><span class="errorMsg"></span></b>
+            <input type="password" name="myCPass"><b><span class="errorMsg"></span></b>
         </div>
 
         <div class="btns">
@@ -56,4 +58,5 @@
     </form>
 </body>
 <script src="Form_validation.js"></script>
+
 </html>
