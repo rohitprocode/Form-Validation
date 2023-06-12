@@ -37,7 +37,7 @@ function greenAlert(){
     // let inpu1 = document.forms['myForm']['"myFirstName"'].value;
     setErrors('divfName','Looks Good');
     document.getElementById('fnameInpu').style.border = '2px solid lightgreen';
-    // validateForm(); 
+    validateForm(); 
 }
 
 
@@ -50,12 +50,10 @@ function validateForm() {
 
     // First Input
     let name = document.forms['myForm']["myFirstName"].value;
+
     if (name.length < 3) {
         setErrors('divfName', "*Length of Name is too Short!");
         document.getElementById('fnameInpu').style.border = "2px solid red";
-        // if (onsubmit_condition == false) {
-        //     document.getElementsByTagName('fnameInput').style.borderColor = "red";
-        // }
         onsubmit_condition = false;
     }
 
@@ -71,7 +69,7 @@ function validateForm() {
         onsubmit_condition = false;
     }
 
-
+  
     //Second Input
     let middle_name = document.forms['myForm']['myMiddleName'].value;
 
@@ -152,11 +150,6 @@ function validateForm() {
         onsubmit_condition = false;
     }
 
-    // else {
-    //     setErrors('divpass', 'Everything is ok');
-    //     document.getElementById('pInpu').style.border = "2px solid lightgreen";
-    //     onsubmit_condition = false;
-    // }
 
     //Sixth Input
 
@@ -193,27 +186,3 @@ function pass_show(){
     }
 }
 
-// function getcolor(id, msg) {
-//     element1 = document.getElementById(id);
-//     element1.getElementsByClassName('errorMsg')[0].innerHTML = msg;
-// }
-    // function rgbalert() {
-    //     let fname = document.forms['myForm']['myFirstName'].value;
-    //     if (fname.length < 3) {
-    //         setErrors('divfName', '*Length of Name is too Short!123')
-    //         document.getElementById('fnameInpu').style.border = "2px solid red";
-    //     }
-    //     if (fname.length > 12) {
-    //         setErrors('divfName', "*Length of Name is too Long!");
-    //         document.getElementById('fnameInpu').style.border = "2px solid red";
-    //     }
-
-    //     if (Number(fname)) {
-    //         setErrors('divfName', '*Name cannot be a Number');
-    //         document.getElementById('fnameInpu').style.border = "2px solid red";
-    //     }
-    //     else {
-    //         getcolor('divfName', 'Looks Good')
-    //         document.getElementById('fnameInpu').style.border = "2px solid lightgreen";
-    //     }
-    // }
