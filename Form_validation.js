@@ -33,12 +33,12 @@ function setErrors(id, error) {
 }
 
 //Function for Phone_Number input
-function greenAlert(){
-    // let inpu1 = document.forms['myForm']['"myFirstName"'].value;
-    setErrors('divfName','Looks Good');
-    document.getElementById('fnameInpu').style.border = '2px solid lightgreen';
-    validateForm(); 
-}
+// function greenAlert(){
+//     // let inpu1 = document.forms['myForm']['"myFirstName"'].value;
+//     setErrors('divfName','Looks Good');
+//     document.getElementById('fnameInpu').style.border = '2px solid lightgreen';
+//     validateForm(); 
+// }
 
 
 
